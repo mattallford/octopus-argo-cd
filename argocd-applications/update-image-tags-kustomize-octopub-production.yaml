@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: update-image-tags-kustomize-octopub-production
+spec:
+  project: default
+  source:
+    repoURL: ""
+    targetRevision: HEAD
+    path: ""
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ""
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
