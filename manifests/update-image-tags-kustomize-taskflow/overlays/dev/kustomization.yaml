@@ -7,8 +7,6 @@ metadata:
 resources:
 - ../../base
 
-namespace: taskflow-dev
-
 images:
 - name: mattallford/taskflow-api
   newTag: latest

@@ -5,7 +5,6 @@ metadata:
   name: taskflow-base
 
 resources:
-- namespace.yaml
 - secret.yaml
 - configmap.yaml
 - postgres.yaml
