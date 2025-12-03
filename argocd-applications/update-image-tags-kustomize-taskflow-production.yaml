@@ -5,15 +5,16 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: ""
+    repoURL: "https://github.com/mattallford/octopus-argo-cd"
     targetRevision: HEAD
-    path: ""
+    path: "manifests/update-image-tags-kustomize-taskflow/overlays/production"
   destination:
     server: https://kubernetes.default.svc
-    namespace: ""
+    namespace: "update-image-tags-kustomize-taskflow-production"
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - Validate=false
