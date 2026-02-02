@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/mattallford/octopus-argo-cd"
+    targetRevision: HEAD
+    path: "manifests/update-manifests-kustomize-taskflow/overlays/dev"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: "update-manifests-kustomize-taskflow-dev"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - Validate=false
