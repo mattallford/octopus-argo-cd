@@ -1,4 +1,0 @@
-kind: Kustomization
-
-# Placeholder - Octopus Deploy will populate this directory
-resources: []
