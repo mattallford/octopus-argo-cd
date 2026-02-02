@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: update-image-tags-kustomize-taskflow-production
+  name: update-image-tags-kustomize-taskflow-dev
   annotations:
     argo.octopus.com/project: "argo-update-image-tags"
     argo.octopus.com/environment: "dev"
