@@ -9,9 +9,9 @@ resources:
 
 images:
 - name: mattallford/taskflow-api
-  newTag: "1.1.19"
+  newTag: "1.1.25"
 - name: mattallford/taskflow-web
-  newTag: "1.1.19"
+  newTag: "1.1.25"
 
 patches:
 - path: configmap-patch.yaml
