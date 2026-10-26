@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: update-image-tags-kustomize-taskflow-dev
+  annotations:
+    argo.octopus.com/project: "argo-update-image-tags"
+    argo.octopus.com/environment: "dev"
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/mattallford/octopus-argo-cd"
+    targetRevision: HEAD
+    path: "manifests/update-image-tags-kustomize-taskflow/overlays/dev"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: "update-image-tags-kustomize-taskflow-dev"
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - Validate=false
