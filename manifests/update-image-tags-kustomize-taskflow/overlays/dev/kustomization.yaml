@@ -9,9 +9,9 @@ resources:
 
 images:
 - name: mattallford/taskflow-api
-  newTag: "1.1.37"
+  newTag: "1.1.39-arm64"
 - name: mattallford/taskflow-web
-  newTag: "1.1.37"
+  newTag: "1.1.39-arm64"
 
 patches:
 - path: configmap-patch.yaml
